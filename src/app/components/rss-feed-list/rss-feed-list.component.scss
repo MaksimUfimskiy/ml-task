@@ -1,0 +1,14 @@
+.ml-rss-feed-list {
+	width: 600px;
+
+	&__item {
+		padding: 0 8px;
+		margin: 8px 0;
+
+		.ml-feed-item-date {
+			font-size: 12px;
+			letter-spacing: 0.25px;
+			line-height: 16px;
+		}
+	}
+}

@@ -1,0 +1,19 @@
+<div class="ml-task">
+	<h2 class="ml-task__header">RSS Feed Parser</h2>
+	<div class="ml-task__content">
+		<ml-rss-search class="ml-task__rss-search" (rssSearched)="onRssSearch($event)"></ml-rss-search>
+		<ng-container *ngIf="!isRssFetchFailed; else errorState">
+			<ml-paginator
+				class="ml-task__paginator"
+				[pageIndex]="pageIndex"
+				[pageSize]="5"
+				[totalElements]="(feed || []).length"
+				(pageChanged)="onPageChange($event)"
+			></ml-paginator>
+			<ml-rss-feed-list class="ml-task__feed-list" [feedList]="dataPage$ | async"></ml-rss-feed-list>
+		</ng-container>
+		<ng-template #errorState>
+			<ml-error-state [errorDetails]="errorDetails"></ml-error-state>
+		</ng-template>
+	</div>
+</div>

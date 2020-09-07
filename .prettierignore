@@ -1,0 +1,13 @@
+*.sh
+*.svg
+*.png
+*.json
+*.md
+*.txt
+*.ttf
+*.eot
+*.woff
+*.ico
+*.conf
+*.snap
+.prettierignore

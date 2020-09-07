@@ -1,0 +1,12 @@
+.ml-task {
+	&__header {
+		text-align: center;
+	}
+
+	&__paginator,
+	&__feed-list,
+	&__rss-search {
+		display: flex;
+		justify-content: center;
+	}
+}

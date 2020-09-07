@@ -1,0 +1,13 @@
+<div class="ml-rss-search">
+	<mat-form-field class="ml-rss-search__form-field">
+		<mat-label>RSS Feed</mat-label>
+		<input [formControl]="rssFormControl" matInput />
+		<mat-error *ngIf="rssFormControl.hasError('urlInvalid') && !rssFormControl.hasError('required')">
+			Please enter a valid url
+		</mat-error>
+		<mat-error *ngIf="rssFormControl.hasError('required')">
+			Field is required
+		</mat-error>
+	</mat-form-field>
+	<button mat-stroked-button [disabled]="rssFormControl.invalid" (click)="submit()">Submit</button>
+</div>

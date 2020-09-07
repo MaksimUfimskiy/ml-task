@@ -1,0 +1,8 @@
+<div class="ml-rss-feed-list">
+	<div class="ml-rss-feed-list__item" *ngFor="let feedItem of feedList">
+		<div class="ml-feed-item-title">
+			<a [href]="feedItem.link" target="_blank" [title]="feedItem.description">{{ feedItem.title }}</a>
+		</div>
+		<div *ngIf="feedItem.pubDate" class="ml-feed-item-date">{{ feedItem.pubDate | date: 'MM/dd/yyyy @ hh:mma' }}</div>
+	</div>
+</div>

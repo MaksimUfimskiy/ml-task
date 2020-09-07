@@ -1,0 +1,7 @@
+<div class="ml-paginator">
+	<button mat-button [disabled]="currentPage <= 1" (click)="goToPage(1)"><<</button>
+	<button mat-button [disabled]="currentPage <= 1" (click)="goToPage(currentPage - 1)"><</button>
+	<span class="ml-paginator__counter">{{ currentPage }} of {{ maxPage }}</span>
+	<button mat-button [disabled]="currentPage >= maxPage" (click)="goToPage(currentPage + 1)">></button>
+	<button mat-button [disabled]="currentPage >= maxPage" (click)="goToPage(maxPage)">>></button>
+</div>
